@@ -1,6 +1,8 @@
 
 
 document.addEventListener("DOMContentLoaded", () => {
+
+    
     mountLayout("career-coach.html");
     const textarea = document.getElementById("userQuestion");
 
@@ -49,6 +51,8 @@ textarea.addEventListener("input", () => {
         results.top_career_matches[0]?.career ||
 
         "Not Available";
+
+        
 
     profile.innerHTML = `
 
@@ -113,6 +117,22 @@ textarea.addEventListener("input", () => {
     `;
 
 });
+
+function formatAIResponse(text) {
+
+    return text
+
+        .replace(/\*\*/g, "")          // Remove bold markdown
+        .replace(/\r\n/g, "\n")        // Normalize newlines
+        .replace(/\n{2,}/g, "\n")      // Remove extra blank lines
+        .replace(/\* /g, "• ")
+        .replace(/\n/g, "<br>")
+        .replace(/• /g, "<br>• ")
+        .replace(/Next step:/gi, "<br><br><strong>Next Step:</strong>")
+        .replace(/Prioritize learning/gi, "<strong>Priority Skills</strong><br>")
+        .replace(/Consider these projects/gi, "<strong>Recommended Projects</strong><br>");
+
+}
 
 // ======================================
 // Suggested Questions
@@ -211,7 +231,7 @@ document.getElementById("sendQuestion")
 
     <div class="message-content ai-message-box">
 
-        ${response.answer}
+       ${formatAIResponse(response.answer)}
 
     </div>
 
