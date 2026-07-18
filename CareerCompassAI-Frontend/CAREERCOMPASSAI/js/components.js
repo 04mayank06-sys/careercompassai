@@ -158,9 +158,12 @@ function renderReadinessScoreCard(score, level) {
         <svg viewBox="0 0 180 180">
           <defs>
             <linearGradient id="scoreGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stop-color="#6366f1"/>
-              <stop offset="100%" stop-color="#a855f7"/>
-            </linearGradient>
+
+    <stop offset="0%" stop-color="#10b981"/>
+
+    <stop offset="100%" stop-color="#34d399"/>
+
+</linearGradient>
           </defs>
           <circle class="bg" cx="90" cy="90" r="75"/>
           <circle class="fill" cx="90" cy="90" r="75"
