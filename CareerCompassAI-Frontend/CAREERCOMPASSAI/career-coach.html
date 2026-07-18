@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>AI Career Coach — Career Compass AI</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+
+</head>
+
+<body>
+
+<div class="page-wrapper">
+
+    <div id="navbar-slot"></div>
+
+    <main>
+
+        <section class="dashboard">
+
+            <div class="container">
+
+                <div class="dashboard-header">
+
+    <a href="results.html"
+   class="btn btn-secondary"
+   style="margin-bottom:1.2rem;display:inline-flex;width:max-content;">
+
+    ← Results Dashboard
+
+</a>
+
+    <h1>🤖 AI Career Coach</h1>
+
+                    <p>
+
+                        Welcome to your personal AI Career Coach.
+
+                        Ask anything related to your career,
+
+                        roadmap, readiness score, projects,
+
+                        certifications or placements.
+
+                    </p>
+
+                </div>
+
+                <!-- Student Profile -->
+
+<div class="card">
+
+    <h2>Your Career Profile</h2>
+
+    <div id="profileSummary">
+
+        Loading your assessment...
+
+    </div>
+
+</div>
+
+
+<!-- Suggested Questions -->
+
+<div class="card" style="margin-top:1.5rem;">
+
+    <h2>✨ Try Asking</h2>
+
+    <div class="suggestion-grid">
+
+        <button
+class="btn btn-secondary suggestion-btn"
+data-question="How can I improve my readiness score?">
+
+📈 How can I improve my readiness score?
+
+</button>
+
+<button
+class="btn btn-secondary suggestion-btn"
+data-question="Which skills should I learn first?">
+
+🎯 Which skills should I learn first?
+
+</button>
+
+<button
+class="btn btn-secondary suggestion-btn"
+data-question="Suggest projects for me">
+
+💼 Suggest projects for me
+
+</button>
+
+<button
+class="btn btn-secondary suggestion-btn"
+data-question="Recommend certifications">
+
+📚 Recommend certifications
+
+</button>
+
+    </div>
+
+</div>
+
+
+<!-- Conversation -->
+
+<div class="card" style="margin-top:1.5rem;">
+
+    <h2>Conversation</h2>
+
+    <div id="chatMessages">
+
+        <div class="ai-message">
+
+            👋 Hello!
+
+            <br><br>
+
+            I'm your AI Career Coach.
+
+            I already know your assessment results.
+
+            Ask me anything about improving your career.
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- Chat Input -->
+
+<div class="card chat-input-card">
+
+    <div class="chat-input-wrapper">
+
+        <textarea
+            id="userQuestion"
+            class="chat-input"
+            rows="2"
+            placeholder="Ask anything about your career..."></textarea>
+
+        <button
+            id="sendQuestion"
+            class="chat-send-btn">
+
+            ➜
+
+        </button>
+
+    </div>
+
+</div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <div id="footer-slot"></div>
+
+</div>
+
+<script src="js/data.js"></script>
+<script src="js/api.js"></script>
+<script src="js/components.js"></script>
+<script src="js/coach.js"></script>
+
+</body>
+
+</html>
